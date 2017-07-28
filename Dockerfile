@@ -1,6 +1,6 @@
 FROM danielsomerfield/java-app-base
 
 RUN mkdir /opt/service
-ADD build/libs/app-secret-reference-implementation.jar /opt/service/lib
+ADD build/libs/hello-secret-world.jar /opt/service/lib
 
-ENTRYPOINT ["java", "-jar", "/opt/service/lib/app-secret-reference-implementation.jar"]
+ENTRYPOINT ["java", "-jar", "/opt/service/lib/hello-secret-world.jar"]
