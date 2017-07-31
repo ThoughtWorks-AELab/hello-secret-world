@@ -6,7 +6,7 @@ GO_PIPELINE_LABEL ?= 0
 build:
 	docker build --tag "danielsomerfield/hello-secret-world:${GO_PIPELINE_LABEL}" .
 
-push:
+push: build
 	docker push danielsomerfield/hello-secret-world
 
 clean:
