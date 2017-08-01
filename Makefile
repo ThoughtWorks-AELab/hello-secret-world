@@ -7,7 +7,8 @@ build:
 	docker build --tag "danielsomerfield/hello-secret-world:${GO_PIPELINE_LABEL}" .
 
 push: build
-	docker push danielsomerfield/hello-secret-world
+	docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD}
+	docker push danielsomerfield/hello-secret-world:${GO_PIPELINE_LABEL}
 
 clean:
 
