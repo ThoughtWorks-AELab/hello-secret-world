@@ -10,7 +10,7 @@ public class HelloSecretController {
     @Value("${secret1}")
     private String secret;
 
-    @RequestMapping("/")
+    @RequestMapping("/secret")
     String home() {
         return "Hello World: " + secret;
     }

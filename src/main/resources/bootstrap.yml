@@ -1,11 +1,14 @@
 spring:
   application:
     name: hello-secret-world
-  cloud:
-    vault:
-      token: ${VAULT_TOKEN}
-      scheme: http
-      generic:
-        enabled: true
-      config:
-          enabled: true
+
+hello-secret-world:
+  secret1: blah
+#  cloud:
+#    vault:
+#      token: ${VAULT_TOKEN}
+#      scheme: http
+#      generic:
+#        enabled: true
+#      config:
+#          enabled: true

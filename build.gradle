@@ -43,5 +43,5 @@ dependencyManagement {
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
     compile("org.springframework.boot:spring-boot-starter-actuator")
-    compile("org.springframework.cloud:spring-cloud-vault-starter-config:${springCloudConfigStarterVersion}")
+//    compile("org.springframework.cloud:spring-cloud-vault-starter-config:${springCloudConfigStarterVersion}")
 }
