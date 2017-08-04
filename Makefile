@@ -9,8 +9,9 @@ build:
 	    --build-arg GO_PIPELINE_LABEL=${GO_PIPELINE_LABEL} .
 
 push: build
-	docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD}
-	docker push danielsomerfield/hello-secret-world:${GO_PIPELINE_LABEL}
+    ./pipeline/push_container.sh
+	# docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD}
+	# docker push danielsomerfield/hello-secret-world:${GO_PIPELINE_LABEL}
 
 clean:
 
