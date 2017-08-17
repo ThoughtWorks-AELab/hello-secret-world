@@ -2,7 +2,7 @@
 
 set -e
 
-export VAULT_ADDR=http://$VAULT_SERVICE_HOST:$VAULT_SERVICE_PORT
+export VAULT_ADDR=https://$VAULT_SERVICE_HOST:$VAULT_SERVICE_PORT
 
 vault_response=`vault write -format=json auth/approle/login role_id=$VAULT_ROLE_ID secret_id=$VAULT_SECRET_ID`
 token=`echo $vault_response|jq -r '.auth .client_token'`
